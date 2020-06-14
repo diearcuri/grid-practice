@@ -1,1 +1,15 @@
-/* No CSS *//*# sourceMappingURL=jazz.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url("images/wynton-marsalis.jpg") no-repeat;
+}
+/*# sourceMappingURL=jazz.css.map */
