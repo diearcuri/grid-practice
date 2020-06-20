@@ -12,4 +12,15 @@ html, body {
 body {
   background: url("images/wynton-marsalis.jpg") no-repeat;
 }
+
+@media (min-width: 768px) {
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (14vw)[6];
+        grid-template-columns: repeat(6, 14vw);
+    grid-auto-rows: minmax(14vw, -webkit-min-content);
+    grid-auto-rows: minmax(14vw, min-content);
+  }
+}
 /*# sourceMappingURL=jazz.css.map */

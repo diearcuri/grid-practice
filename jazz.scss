@@ -11,3 +11,11 @@ html, body {
 body {
     background: url('images/wynton-marsalis.jpg') no-repeat;
 }
+
+@media (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(6, 14vw);
+        grid-auto-rows: minmax(14vw, min-content);
+    }
+}
