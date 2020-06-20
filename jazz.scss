@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,17 +7,117 @@
 }
 
 html, body {
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
-    background: url('images/wynton-marsalis.jpg') no-repeat;
+    background: url('/images/wynton-marsalis.jpg') no-repeat;
+    background-size: cover;
+    background-position: right top;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+    max-width: 60vw;
+    margin-top: 10px;
+}
+
+.almanac__event {
+        background: #D4759F;
+        padding: 10px;
+        color: #fff;
+        font-size: .7em;
+
+        .almanac__title, .almanac__date {
+            color: #FFD274;
+        }
+
+        .almanac__content {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
 }
 
 @media (min-width: 768px) {
+    .main-container {
+        max-width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2vw;
+        padding-bottom: 4vw;
+    }
+
     .grid-container {
         display: grid;
         grid-template-columns: repeat(6, 14vw);
-        grid-auto-rows: minmax(14vw, min-content);
+        grid-auto-rows: minmax(14vw, 1fr);
+        grid-gap: 1vw;
+    }
+    
+    li {
+        max-width: initial;
+        margin-top: 0;
+    }
+
+    .main-title {
+        grid-column: span 3;
+        grid-row: 2 / 3;
+        max-width: 28vw;
+        text-align: right;
+        font-size: .8em;
+        place-self: center right;
+    }
+
+    .almanac__event:nth-child(1) {
+        grid-column: 3 / 4;
+    }
+    .almanac__event:nth-child(3) {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+    }
+    .almanac__event:nth-child(4) {
+        grid-row: 3 / 4;
+    }
+    .almanac__event:nth-child(5) {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+    .almanac__event:nth-child(6) {
+        grid-column: 4 / 5;
+        grid-row: 4 / 5;
+    }
+    .almanac__event:nth-child(7) {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+    .almanac__event:nth-child(8) {
+        grid-column: 3 / 4;
+        grid-row: 5 / 6;
+    }
+    .almanac__event:nth-child(9) {
+        grid-column: 2 / 3;
+        grid-row: 6 / 7;
+    }
+
+    .get-tickets {
+        grid-column: 5 / 7;
+        grid-row: 6 / 7;
+    }
+
+    .almanac__event:nth-child(11) {
+        grid-column: 4 / 5;
+        grid-row: 7 / 8;
+    }
+    .almanac__event:nth-child(12) {
+        grid-row: 8 / 9;
+    }
+    .almanac__event:nth-child(13) {
+        grid-column: 3 / 4;
+        grid-row: 9 / 10;
+    }
+
+    .footer {
+        margin-top: 14vw;
     }
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -6,21 +7,157 @@
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
-  background: url("images/wynton-marsalis.jpg") no-repeat;
+  background: url("/images/wynton-marsalis.jpg") no-repeat;
+  background-size: cover;
+  background-position: right top;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+li {
+  list-style: none;
+  max-width: 60vw;
+  margin-top: 10px;
+}
+
+.almanac__event {
+  background: #D4759F;
+  padding: 10px;
+  color: #fff;
+  font-size: .7em;
+}
+
+.almanac__event .almanac__title, .almanac__event .almanac__date {
+  color: #FFD274;
+}
+
+.almanac__event .almanac__content {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 @media (min-width: 768px) {
+  .main-container {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2vw;
+    padding-bottom: 4vw;
+  }
   .grid-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (14vw)[6];
         grid-template-columns: repeat(6, 14vw);
-    grid-auto-rows: minmax(14vw, -webkit-min-content);
-    grid-auto-rows: minmax(14vw, min-content);
+    grid-auto-rows: minmax(14vw, 1fr);
+    grid-gap: 1vw;
+  }
+  li {
+    max-width: initial;
+    margin-top: 0;
+  }
+  .main-title {
+    grid-column: span 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    max-width: 28vw;
+    text-align: right;
+    font-size: .8em;
+    place-self: center right;
+  }
+  .almanac__event:nth-child(1) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+  }
+  .almanac__event:nth-child(3) {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4 / 5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .almanac__event:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  .almanac__event:nth-child(5) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  .almanac__event:nth-child(6) {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4 / 5;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  .almanac__event:nth-child(7) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  .almanac__event:nth-child(8) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  .almanac__event:nth-child(9) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6 / 7;
+  }
+  .get-tickets {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 2;
+    grid-column: 5 / 7;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6 / 7;
+  }
+  .almanac__event:nth-child(11) {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4 / 5;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 7 / 8;
+  }
+  .almanac__event:nth-child(12) {
+    -ms-grid-row: 8;
+    -ms-grid-row-span: 1;
+    grid-row: 8 / 9;
+  }
+  .almanac__event:nth-child(13) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 1;
+    grid-row: 9 / 10;
+  }
+  .footer {
+    margin-top: 14vw;
   }
 }
 /*# sourceMappingURL=jazz.css.map */
