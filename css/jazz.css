@@ -52,10 +52,6 @@ li {
 }
 
 .get-tickets {
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 2;
-  grid-column: 5 / 7;
-  grid-row: -1;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 0 0 7px 7px;
   color: #fff;
@@ -92,6 +88,11 @@ li {
     padding-bottom: 4vw;
   }
   .grid-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (14vw)[6];
