@@ -32,7 +32,7 @@ li {
   background: #D4759F;
   padding: 10px;
   color: #fff;
-  font-size: .7em;
+  font-size: clamp(0.8em, 0.9vw, 1.2rem);
 }
 
 .almanac__event .almanac__title, .almanac__event .almanac__date {
@@ -57,6 +57,7 @@ li {
   color: #fff;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  font-size: clamp(0.8em, 0.9vw, 1.1rem);
 }
 
 .get-tickets .get-tickets__title {
@@ -64,12 +65,12 @@ li {
   padding: 3px 13px;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: .9em;
+  font-size: .95em;
 }
 
 .get-tickets .get-tickets__content {
   padding: 13px;
-  font-size: .7em;
+  font-size: .9em;
 }
 
 @media (min-width: 500px) {
@@ -111,7 +112,7 @@ li {
     grid-row: 2 / 3;
     max-width: 28vw;
     text-align: right;
-    font-size: .8em;
+    font-size: clamp(0.8rem, 1.25vw, 1.25rem);
     place-self: center right;
   }
   .almanac__event:nth-child(1) {
