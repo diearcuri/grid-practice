@@ -1,0 +1,89 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  background: white;
+  color: #3C3C3B;
+  font-family: 'Futura W01', helvetica, san-serif;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mondrian-responsive main {
+  -ms-flex-preferred-size: 940px;
+      flex-basis: 940px;
+  margin: auto;
+}
+
+.mondrian-responsive main li:nth-child(1), .mondrian-responsive main li:nth-child(3), .mondrian-responsive main li:nth-child(7), .mondrian-responsive main li:nth-child(11), .mondrian-responsive main li:nth-child(12), .mondrian-responsive main li:nth-child(13), .mondrian-responsive main li:nth-child(15), .mondrian-responsive main li:nth-child(16), .mondrian-responsive main li:nth-child(18), .mondrian-responsive main li:nth-child(19) {
+  grid-column: span 2;
+}
+
+.mondrian-responsive main li:nth-child(2) {
+  grid-column: span 3;
+}
+
+.mondrian-responsive main li:nth-child(4) {
+  grid-row: span 6;
+}
+
+.mondrian-responsive main li:nth-child(5), .mondrian-responsive main li:nth-child(7), .mondrian-responsive main li:nth-child(9), .mondrian-responsive main li:nth-child(10), .mondrian-responsive main li:nth-child(11), .mondrian-responsive main li:nth-child(16), .mondrian-responsive main li:nth-child(18) {
+  grid-row: span 2;
+}
+
+.mondrian-responsive main li:nth-child(6) {
+  grid-column: span 4;
+  grid-row: span 4;
+}
+
+.mondrian-responsive main li:nth-child(8), .mondrian-responsive main li:nth-child(17), .mondrian-responsive main li:nth-child(14) {
+  grid-row: span 3;
+}
+
+.mondrian-responsive main li:nth-child(20) {
+  grid-column: span 4;
+}
+
+ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(80px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-auto-rows: 80px;
+  grid-auto-flow: dense;
+  background: #1C1B1B;
+  -webkit-clip-path: polygon(10px 6px, calc(100% - 7px) 6px, calc(100% - 7px) calc(100% - 6px), 10px calc(100% - 6px));
+          clip-path: polygon(10px 6px, calc(100% - 7px) 6px, calc(100% - 7px) calc(100% - 6px), 10px calc(100% - 6px));
+}
+
+ul li {
+  border: 6px solid #000;
+}
+
+img {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+/*# sourceMappingURL=mondrian.css.map */
